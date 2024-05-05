@@ -1,0 +1,360 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input,
+textarea {
+  border: none;
+}
+
+/* Variables */
+:root {
+  --primary-color: #c86b00;
+  --secondary-color: #1a3a5f;
+  --max-width: 1100px;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+input,
+textarea {
+  font-family: inherit;
+}
+
+/* Utilities */
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin-inline: auto;
+  padding-inline: 2em;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--secondary-color);
+  padding: 1em 1.5em;
+  cursor: pointer;
+  color: #fff;
+  border: 0;
+  font-family: inherit;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.section-padding {
+  padding-block: 3em;
+}
+
+.section-heading {
+  font-size: 2.8em;
+  margin-bottom: 1.5em;
+  padding-top: 2em;
+}
+
+.section-sub-heading {
+  font-size: 1.8em;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+.invisible-but-accessible {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2em;
+}
+
+.card {
+  background-color: #d9974d;
+  padding: 4em 2em;
+  transition: all 0.5s ease;
+}
+
+.card-icon {
+  background-color: var(--secondary-color);
+  padding: 1em;
+  font-size: 1.5em;
+  border-radius: 50%;
+}
+
+.card-heading {
+  padding-block: 1em 0.5em;
+}
+
+.flex-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+}
+
+.flex {
+  display: flex;
+  gap: 2em;
+  margin-top: 1em;
+  font-size: 1.2em;
+}
+
+.mb-2 {
+  margin-bottom: 1.3em;
+}
+
+/*------------ Navigation Bar ------------*/
+#navbar {
+  position: sticky;
+  top: 0;
+  padding-block: 1.75em;
+  background-color: rgba(199, 106, 0, 0.7);
+  z-index: 1;
+}
+
+#navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navbar .logo img {
+  width: 150px;
+}
+
+#navbar .nav-link {
+  display: inline-block;
+  padding-inline: 1.5em;
+  font-size: 1.1em;
+  transition: color 0.4s ease;
+}
+
+#navbar .nav-link a:hover {
+  color: var(--secondary-color);
+}
+
+/*------------ Hero ------------*/
+#hero {
+  background-color: var(--primary-color);
+  padding-top: 2em;
+}
+
+#hero .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+#hero .container > * {
+  flex: 1 400px;
+}
+
+#hero h1 {
+  font-size: 3.2em;
+}
+
+#hero p {
+  font-size: 1.4rem;
+  margin-block: 1em;
+}
+
+/*------------- Brands -------------*/
+#brands {
+  background-color: #1a3a5f;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-block: 1em;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 10));
+  }
+}
+
+#brands .brands {
+  display: flex;
+  animation: scroll 20s linear infinite;
+  width: calc(250px * 20);
+}
+
+#brands .brand {
+  font-size: 5em;
+  width: 1000px;
+}
+
+/*------------- Why Choose Opidur? -------------*/
+
+/*------------- Testimonial -------------*/
+#testimonial .container div {
+  font-size: 1.5em;
+}
+
+#testimonial p:nth-last-of-type(1) {
+  color: #1a3a5f;
+  font-weight: bold;
+}
+
+/*------------- Contact -------------*/
+#contact .contact {
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+#contact .contact > * {
+  flex: 1 300px;
+}
+
+#contact .form-field {
+  margin-bottom: 1.8em;
+}
+
+#contact label {
+  display: block;
+}
+
+#contact .form-field input,
+#contact .form-field input[type="button"],
+#contact .form-field textarea,
+#contact .form-field .submit-btn {
+  width: 100%;
+  padding: 1em;
+}
+
+#contact .submit-btn {
+  padding: 1em;
+  width: 100%;
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+}
+
+#contact .contact-form {
+  padding: 3.5em;
+  background-color: #1a3a5f;
+}
+
+#contact h3 {
+  font-size: 2em;
+}
+
+#contact p {
+  margin-top: 1.5em;
+  font-size: 1.5em;
+}
+
+/*-------------- Reach out ----------------*/
+
+/*-------------- Footer ----------------*/
+#footer {
+  background-color: #1a3a5f;
+  margin-top: 4em;
+}
+
+#footer p {
+  margin-block: 1.5em;
+}
+
+#footer h3 {
+  padding-top: 0;
+}
+
+.footer-content > * {
+  height: fit-content;
+}
+
+#footer .img-bg {
+  padding: 1em;
+  background-color: #c86b00;
+  width: fit-content;
+  height: fit-content;
+}
+
+#footer .quick-links-links {
+  font-size: 1.6em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+#footer .cards-wrapper {
+  gap: 3em;
+}
+
+#footer h3 {
+  color: #c86b00;
+}
+
+#footer .email-optin {
+  padding: 1em;
+  width: 100%;
+}
+
+#footer .optin-submit {
+  width: 100%;
+  padding: 1em;
+  background-color: #c86b00;
+  color: #fff;
+}
+
+/* Media queries */
+@media screen and (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+  .nav-link {
+    display: block;
+  }
+}
